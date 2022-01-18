@@ -1,0 +1,5 @@
+C:\Users\marchetto\source\repos\lljvm-cc-trunk\runtime\dotnet\bin\Debug\llxvm.dll
+C:\Users\marchetto\source\repos\lljvm-cc-trunk\runtime\dotnet\bin\Debug\llxvm.pdb
+C:\Users\marchetto\source\repos\lljvm-cc-trunk\runtime\dotnet\obj\Debug\llxvm.csproj.CoreCompileInputs.cache
+C:\Users\marchetto\source\repos\lljvm-cc-trunk\runtime\dotnet\obj\Debug\llxvm.dll
+C:\Users\marchetto\source\repos\lljvm-cc-trunk\runtime\dotnet\obj\Debug\llxvm.pdb

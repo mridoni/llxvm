@@ -1,0 +1,35 @@
+diff -ur gmp-6.2.1/printf/doprnt.c gmp-6.2.1.ok/printf/doprnt.c
+--- gmp-6.2.1/printf/doprnt.c	2020-11-14 19:45:09.000000000 +0100
++++ gmp-6.2.1.ok/printf/doprnt.c	2021-11-10 17:23:18.350878504 +0100
+@@ -42,6 +42,9 @@
+ #include <string.h>
+ #include <stdio.h>     /* for NULL */
+ #include <stdlib.h>
++#include <stdint.h>
++
++typedef int64_t quad_t;
+ 
+ #if HAVE_INTTYPES_H
+ # include <inttypes.h> /* for intmax_t */
+diff -ur gmp-6.2.1/scanf/doscan.c gmp-6.2.1.ok/scanf/doscan.c
+--- gmp-6.2.1/scanf/doscan.c	2020-11-14 19:45:09.000000000 +0100
++++ gmp-6.2.1.ok/scanf/doscan.c	2021-11-10 17:24:50.646604888 +0100
+@@ -59,6 +59,7 @@
+ # endif
+ #endif
+ 
++typedef int64_t quad_t;
+ #if HAVE_SYS_TYPES_H
+ #include <sys/types.h> /* for quad_t */
+ #endif
+--- gmp-6.2.1/config.h	2021-11-11 09:07:50.863607427 +0100
++++ gmp-6.2.1.ok/config.h	2021-11-10 17:20:22.495427780 +0100
+@@ -382,7 +382,7 @@
+ #define HAVE_NL_TYPES_H 1
+ 
+ /* Define to 1 if you have the `obstack_vprintf' function. */
+-#define HAVE_OBSTACK_VPRINTF 1
++#define HAVE_OBSTACK_VPRINTF 0
+ 
+ /* Define to 1 if you have the `popen' function. */
+ #define HAVE_POPEN 1

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AsmDriver.cpp" />
+    <ClCompile Include="backend-cil\cil_backend.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_block.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_branch.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_const.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_function.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_instruction.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_loadstore.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_name.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_printinst.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_sections.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\cil_types.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="CILAsmDriver.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-cil\CILWriter.cpp">
+      <Filter>Source Files\CIL</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_backend.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_block.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_branch.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_const.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_function.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_instruction.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_loadstore.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_name.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_printinst.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_sections.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\jvm_types.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="JvmAsmDriver.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="backend-jvm\JVMWriter.cpp">
+      <Filter>Source Files\Java</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyReader.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="jlinker\jasminlinker.cpp" />
+    <ClCompile Include="jreflect\classreader.cpp" />
+    <ClCompile Include="jreflect\jarreader.cpp" />
+    <ClCompile Include="zip\zip.c" />
+    <ClCompile Include="libcpputils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AsmDriver.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="opts.h" />
+    <ClInclude Include="backend-cil\cil-backend.h">
+      <Filter>Header Files\CIL</Filter>
+    </ClInclude>
+    <ClInclude Include="backend-cil\CILWriter.h">
+      <Filter>Header Files\CIL</Filter>
+    </ClInclude>
+    <ClInclude Include="CILAsmDriver.h">
+      <Filter>Header Files\CIL</Filter>
+    </ClInclude>
+    <ClInclude Include="JvmAsmDriver.h">
+      <Filter>Header Files\Java</Filter>
+    </ClInclude>
+    <ClInclude Include="backend-jvm\jvm-backend.h">
+      <Filter>Header Files\Java</Filter>
+    </ClInclude>
+    <ClInclude Include="backend-jvm\JVMWriter.h">
+      <Filter>Header Files\Java</Filter>
+    </ClInclude>
+    <ClInclude Include="AssemblyReader.h" />
+    <ClInclude Include="libcpputils.h" />
+    <ClInclude Include="popl.hpp" />
+    <ClInclude Include="portable-endian.h" />
+    <ClInclude Include="jlinker\jasminlinker.h" />
+    <ClInclude Include="jreflect\classreader.h" />
+    <ClInclude Include="jreflect\jarreader.h" />
+    <ClInclude Include="zip\miniz.h" />
+    <ClInclude Include="zip\zip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{BB42F0BD-E16E-3491-A232-CBC81E20B3A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BE215A21-8E36-3F42-9E04-B70E0B9927BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Java">
+      <UniqueIdentifier>{d22dfa5e-fc5d-49f0-8942-7564c7a179d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Java">
+      <UniqueIdentifier>{de4e494f-a075-4df6-9064-50039af889a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CIL">
+      <UniqueIdentifier>{b57750fb-7f14-4376-a948-6d64a034160c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CIL">
+      <UniqueIdentifier>{c26c4914-bfe0-4537-9e8f-ea4b94ddf1f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

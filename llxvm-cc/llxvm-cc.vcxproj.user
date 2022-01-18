@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>--mode jvm -C hello hello.c</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)test</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerEnvironment>JASMIN_PATH=$(SolutionDir)tools\jasmin.jar
+PATH=C:\LLVM-10.0\bin;D:\LLVM-10.0-src\build\RelWithDebInfo\bin;C:\Program Files\Java\jdk1.8.0_161\bin</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

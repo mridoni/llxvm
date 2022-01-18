@@ -1,0 +1,11 @@
+﻿Build started 15/01/2022 15:39:29.
+Logging verbosity is set to: Normal.     1>Project "C:\Users\marchetto\source\repos\llxvm\llxvm-cc\dotnetpelib\DotNetPELib.vcxproj" on node 2 (Clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "x64\Debug\DotNetPELib.tlog\DotNetPELib.lastbuildstate".
+     1>Done Building Project "C:\Users\marchetto\source\repos\llxvm\llxvm-cc\dotnetpelib\DotNetPELib.vcxproj" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.01

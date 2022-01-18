@@ -1,0 +1,2 @@
+./configure --prefix=/opt/gnucobol-3.1.2 --without-db --without-curses --without-xml2 --without-json --disable-shared --disable-nls
+

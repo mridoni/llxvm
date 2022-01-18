@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2FA3031E-5312-3F98-8DB7-F122E6C7DA67}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>llxvm-cc</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lljvm-cc.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lljvm-cc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lljvm-cc.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lljvm-cc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lljvm-cc.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">lljvm-cc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lljvm-cc.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">lljvm-cc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\LLVM-10.0-src\include;D:\LLVM-10.0-src\build\include;$(SolutionDir)llxvm-cc\;$(SolutionDir)llxvm-cc\backend-jvm;$(SolutionDir)llxvm-cc\backend-cil;$(SolutionDir)llxvm-cc\jreflect;$(SolutionDir)llxvm-cc\jlinker;$(SolutionDir)llxvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSupport.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCore.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMIRReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMPasses.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCodeGen.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSelectionDAG.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObjCARCOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMipo.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAsmParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstrumentation.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMVectorize.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMLinker.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMScalarOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAggressiveInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitWriter.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTarget.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTransformUtils.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAnalysis.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMProfileData.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObject.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMRemarks.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitstreamReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMCParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMC.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoCodeView.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoMSF.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTextAPI.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBinaryFormat.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDemangle.lib;psapi.lib;shell32.lib;ole32.lib;uuid.lib;advapi32.lib;delayimp.lib;-delayload:shell32.dll;-delayload:ole32.dll;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;oleaut32.lib;comdlg32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/Debug/lljvm-cc.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/Debug/lljvm-cc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\LLVM-10.0-src\include;D:\LLVM-10.0-src\build\include;$(SolutionDir)llxvm-cc\;$(SolutionDir)llxvm-cc\backend-jvm;$(SolutionDir)llxvm-cc\backend-cil;$(SolutionDir)llxvm-cc\jreflect;$(SolutionDir)llxvm-cc\jlinker;$(SolutionDir)llxvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSupport.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCore.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMIRReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMPasses.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCodeGen.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSelectionDAG.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObjCARCOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMipo.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAsmParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstrumentation.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMVectorize.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMLinker.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMScalarOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAggressiveInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitWriter.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTarget.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTransformUtils.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAnalysis.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMProfileData.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObject.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMRemarks.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitstreamReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMCParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMC.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoCodeView.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoMSF.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTextAPI.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBinaryFormat.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDemangle.lib;psapi.lib;shell32.lib;ole32.lib;uuid.lib;advapi32.lib;delayimp.lib;-delayload:shell32.dll;-delayload:ole32.dll;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;oleaut32.lib;comdlg32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/Release/lljvm-cc.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/Release/lljvm-cc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\LLVM-10.0-src\include;D:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSupport.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCore.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMIRReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMPasses.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCodeGen.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSelectionDAG.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObjCARCOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMipo.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAsmParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstrumentation.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMVectorize.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMLinker.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMScalarOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAggressiveInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitWriter.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTarget.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTransformUtils.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAnalysis.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMProfileData.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObject.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMRemarks.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitstreamReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMCParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMC.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoCodeView.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoMSF.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTextAPI.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBinaryFormat.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDemangle.lib;psapi.lib;shell32.lib;ole32.lib;uuid.lib;advapi32.lib;delayimp.lib;-delayload:shell32.dll;-delayload:ole32.dll;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;oleaut32.lib;comdlg32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/MinSizeRel/lljvm-cc.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/MinSizeRel/lljvm-cc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\LLVM-10.0-src\include;D:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;UNICODE;_UNICODE;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;__STDC_LIMIT_MACROS;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\LLVM-10.0-src\include;C:\LLVM-10.0-src\build\include;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\.;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\backend;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jreflect;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\jlinker;C:\Users\marchetto\source\repos\lljvm-cc\lljvm-cc\zip;\include;\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSupport.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCore.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMIRReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMPasses.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMCodeGen.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMSelectionDAG.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObjCARCOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMipo.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAsmParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstrumentation.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMVectorize.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMLinker.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMScalarOpts.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAggressiveInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMInstCombine.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitWriter.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTarget.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTransformUtils.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMAnalysis.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMProfileData.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMObject.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMRemarks.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBitstreamReader.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMCParser.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMMC.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoCodeView.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDebugInfoMSF.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMTextAPI.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMBinaryFormat.lib;D:\LLVM-10.0-src\build\$(Configuration)\lib\LLVMDemangle.lib;psapi.lib;shell32.lib;ole32.lib;uuid.lib;advapi32.lib;delayimp.lib;-delayload:shell32.dll;-delayload:ole32.dll;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;oleaut32.lib;comdlg32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/RelWithDebInfo/lljvm-cc.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/marchetto/source/repos/lljvm-cc/build/lljvm-cc/RelWithDebInfo/lljvm-cc.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AsmDriver.cpp" />
+    <ClCompile Include="AssemblyReader.cpp" />
+    <ClCompile Include="backend-cil\cil_backend.cpp" />
+    <ClCompile Include="backend-cil\cil_block.cpp" />
+    <ClCompile Include="backend-cil\cil_branch.cpp" />
+    <ClCompile Include="backend-cil\cil_const.cpp" />
+    <ClCompile Include="backend-cil\cil_function.cpp" />
+    <ClCompile Include="backend-cil\CILWriter.cpp" />
+    <ClCompile Include="backend-cil\cil_instruction.cpp" />
+    <ClCompile Include="backend-cil\cil_loadstore.cpp" />
+    <ClCompile Include="backend-cil\cil_name.cpp" />
+    <ClCompile Include="backend-cil\cil_printinst.cpp" />
+    <ClCompile Include="backend-cil\cil_sections.cpp" />
+    <ClCompile Include="backend-cil\cil_types.cpp" />
+    <ClCompile Include="backend-jvm\jvm_backend.cpp" />
+    <ClCompile Include="backend-jvm\jvm_block.cpp" />
+    <ClCompile Include="backend-jvm\jvm_branch.cpp" />
+    <ClCompile Include="backend-jvm\jvm_const.cpp" />
+    <ClCompile Include="backend-jvm\jvm_function.cpp" />
+    <ClCompile Include="backend-jvm\jvm_instruction.cpp" />
+    <ClCompile Include="backend-jvm\JVMWriter.cpp" />
+    <ClCompile Include="backend-jvm\jvm_loadstore.cpp" />
+    <ClCompile Include="backend-jvm\jvm_name.cpp" />
+    <ClCompile Include="backend-jvm\jvm_printinst.cpp" />
+    <ClCompile Include="backend-jvm\jvm_sections.cpp" />
+    <ClCompile Include="backend-jvm\jvm_types.cpp" />
+    <ClCompile Include="CILAsmDriver.cpp" />
+    <ClCompile Include="JvmAsmDriver.cpp" />
+    <ClCompile Include="libcpputils.cpp" />
+    <ClInclude Include="AsmDriver.h" />
+    <ClInclude Include="AssemblyReader.h" />
+    <ClInclude Include="backend-cil\CILWriter.h" />
+    <ClInclude Include="backend-cil\cil-backend.h" />
+    <ClInclude Include="backend-jvm\JVMWriter.h" />
+    <ClInclude Include="backend-jvm\jvm-backend.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="CILAsmDriver.h" />
+    <ClInclude Include="JvmAsmDriver.h" />
+    <ClInclude Include="opts.h" />
+    <ClInclude Include="libcpputils.h" />
+    <ClCompile Include="main.cpp" />
+    <ClInclude Include="popl.hpp" />
+    <ClInclude Include="portable-endian.h" />
+    <ClCompile Include="jlinker\jasminlinker.cpp" />
+    <ClInclude Include="jlinker\jasminlinker.h" />
+    <ClCompile Include="jreflect\classreader.cpp" />
+    <ClInclude Include="jreflect\classreader.h" />
+    <ClCompile Include="jreflect\jarreader.cpp" />
+    <ClInclude Include="jreflect\jarreader.h" />
+    <ClInclude Include="zip\miniz.h" />
+    <ClCompile Include="zip\zip.c" />
+    <ClInclude Include="zip\zip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="dotnetpelib\DotNetPELib.vcxproj">
+      <Project>{9e09e239-7370-4cbc-a82e-40dbcc0947f3}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
