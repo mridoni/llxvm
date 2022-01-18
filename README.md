@@ -1,6 +1,6 @@
 # LLXVM
 
-llxvm is a tool that allows to compile C source files to JVM bytecode (.class) or CIL/.Net (.exe/dll) and run traditional applications written in C to run in a pure-Java environment (with some caveats). 
+llxvm is a tool that allows to compile C source files to JVM bytecode (.class) or CIL/.Net (.exe/dll) and run traditional applications written in C in a pure-Java environment (with some caveats). 
 
 llxvm is based on [lljvm](https://github.com/davidar/lljvm) by David a. Roberts, a project that unfortunately has been dormant for several years and relies on a now archaic version of LLVM/clang (2.7). I made several changes to adapt it to a more modern version of LLVM/clang (10+), removed some unnecessary tools, rewrote and expanded the linker and added other tools. Moreover, I refactored the backend's code to be able to emit CIL/.Net assembly beside JVM bytecode).
 
@@ -133,7 +133,7 @@ For almost all of this options you will have to specify a Java class name (with 
 
 ### Advanced JVM options
 
-- **-U** : Uses Krakatau instead of Jasmin for assembling the .j files. While this is technically supported, it has not been tested like Jasmin. In case, you wlll have to set the environment variable KRAKATAU_HOME to point o the locatin where Krakatau resides.
+- **-U** : Uses Krakatau instead of Jasmin for assembling the .j files. While this is technically supported, it has not been tested like Jasmin. In case, you wlll have to set the environment variable KRAKATAU_HOME to point to the location where Krakatau resides.
 -  **-W** : use "wide" goto instructions in the generated JVM assembly code. Code using standard goto statements can only handle 16-bit offsets. In some cases (bigger and more complex programs) this might lead to unverifiable/uncompilable code. Using-32 bit offsets with -W ensures the program will run, at the price of increased code size.
 -   **-B** : refactor branches to use jump instructions and avoid problems with 16-bit offsets (see above). Implies -W.
 -   **-W** : use "wide" ldc instructions for constants that exceed a 16-bit index or value
