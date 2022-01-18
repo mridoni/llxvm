@@ -29,7 +29,7 @@ For simpler tasks `llxvm` supports a "in sequence" mode of operation: you can in
 
 ## 
 ## Building and installing
-llxvm runs mainly on Linux. It is possible to run it on Windows, but for now there are no scripts to build the C library on this platform. Since the llxvm-compiled C library (and the runtime) are pure JVM code and have no native dependencies, you can build the C library on Linux, `llxvm-cc` on Windows and mix the two. In the (near) future you will be able to use one of the provided binary packages.
+llxvm runs mainly on Linux. It is possible to run it on Windows, but for now there are no scripts to build the C library on this platform. Since the llxvm-compiled C library (and the runtime) are pure JVM code and have no native dependencies, you can build the C library on Linux, `llxvm-cc` on Windows and mix the two. Or use one of the provided binary packages.
 
 ### Requirements
 To build llxvm you will need:
@@ -127,22 +127,22 @@ For almost all of this options you will have to specify a Java class name (with 
 - **-T** : emit a text version of the bitcode beside the binary one
 - **-l** : link with a file (.plj, .class or .jar), can be used multiple times
 - **-L** : look here for files to link, can be used multiple times
-- **-O** : use this directory as the output base path for .class file, respecting the hierarchy defined by their namespace
+- **-O** : use this directory as the output base path for .class file, respecting the hierarchy defined by its namespace
 - **-K** : keep intermediate files
 - **-g** : debug level (not really useful at this stage)
 
 ### Advanced JVM options
 
 - **-U** : Uses Krakatau instead of Jasmin for assembling the .j files. While this is technically supported, it has not been tested like Jasmin. In case, you wlll have to set the environment variable KRAKATAU_HOME to point o the locatin where Krakatau resides.
--  **-W** : use "wide" goto instructions in the generated JVM assembly code. Code using standard goto statements can only handle 16-bit offsets. In some cases (bigger and more complex programs) this might lead to invalid/uncompilable code. Using 32 bit offsets with -W ensure the program will run, at the price of increased code size.
+-  **-W** : use "wide" goto instructions in the generated JVM assembly code. Code using standard goto statements can only handle 16-bit offsets. In some cases (bigger and more complex programs) this might lead to unverifiable/uncompilable code. Using-32 bit offsets with -W ensures the program will run, at the price of increased code size.
 -   **-B** : refactor branches to use jump instructions and avoid problems with 16-bit offsets (see above). Implies -W.
--   **-W** : uses "wide" ldc instructions for constants that exceed a 16-bit index or value
+-   **-W** : use "wide" ldc instructions for constants that exceed a 16-bit index or value
 -    **-S** : skip initialization of local variables. This reduces code size but might lead to invalid/not-verifiable JVM bytecode
 
 
 ## <a name="notes_code_size"></a>Notes about code size
 
-The JVM allows allows for a maximum size of 64K of bytecode for each method in a class. This means that very long C functions, when translated, could run over this limit. While it is possibile to compile such code to bytecode, trying to run it will lead to an un-verifiable (and un-runnable) .class file. There are other such limits in the JVM, but this is by far the most annoying one. The only option here is to rewrite the code, splitting very long functions into smaller, more manageable sub-functions.
+The JVM allows allows for a maximum size of 64K of bytecode for each method in a class. This means that very long C functions, when translated, could run over this limit. While it is possibile to compile such code to bytecode, trying to run it will lead to an unverifiable (and un-runnable) .class file. There are other such limits in the JVM, but this is by far the most annoying one. The only option here is to rewrite the code, splitting very long functions into smaller, more manageable sub-functions.
 
 Unfortunately this problem has been present in the JVM since the dawn of time, and has been the cause of multiple headaches for writers of tools and code generators (it can also affect the processing of JSP pages). At this point it is not likely it will ever be solved, given the amount of code and tools it would impact. 
 
